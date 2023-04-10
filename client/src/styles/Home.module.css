@@ -1,0 +1,126 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../assets/portfolioBG.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+}
+
+p {
+    margin: 0px;
+}
+
+/* ------------ LANDING ------------ */
+.landing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1080px;
+}
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin-top: -250px;
+}
+
+.dev {
+    background-color: #00bedd;
+    color: white;
+}
+
+.dev {
+    background-color: white;
+    color: #00bedd;
+}
+
+.hi {
+    color: #00bedd;
+    font-weight: 900;
+    font-size: 1100%;
+    margin-right: 2%;
+}
+
+.bannerInfo {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+
+.welcome {
+    color: white;
+    font-weight: 300;
+    font-size: 120%;
+    margin-bottom: 0px;
+}
+
+.nameAndRole {
+    margin-top: 0px;
+}
+
+.whiteText {
+    color: white;
+    font-weight: 300;
+    font-size: 130%;
+}
+
+.nameCont {
+    display: flex;
+    flex-direction: row;
+}
+
+.name {
+    color: #00bedd;
+    font-weight: 600;
+    font-size: 130%;
+}
+
+.roleCont {
+    display: flex;
+    flex-direction: row;
+    margin: 2px 0px;
+}
+
+.roleText {
+    color: #00bedd;
+    font-weight: 600;
+    font-size: 130%;
+    margin: 0px;
+}
+
+.btnsCont {
+    margin-top: 20px;
+}
+
+.buttons {
+    background-color: transparent;
+    border: 1px solid #00bedd;
+    border-radius: 20px;
+    color: white;
+    padding: 5px 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.buttons:hover {
+    background-color: white;
+    border: 1px solid white;
+    color: #00bedd;
+}
+
+/* ------------ ABOUT ------------ */
+.about {
+    background-color: white;
+    box-shadow: 0px 0px 9px 2px #00bedd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1080px;
+}
