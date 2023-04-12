@@ -1,5 +1,4 @@
 body {
-    font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
     background-image: url('../assets/portfolioBG.jpg');
@@ -11,7 +10,15 @@ body {
 }
 
 p {
+    margin: 10px 0px;
+}
+
+hr {
     margin: 0px;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* ------------ LANDING ------------ */
@@ -19,7 +26,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 1080px;
+    height: 100vh;
 }
 
 .banner {
@@ -27,24 +34,13 @@ p {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 50%;
-    margin-top: -250px;
-}
-
-.dev {
-    background-color: #00bedd;
-    color: white;
-}
-
-.dev {
-    background-color: white;
-    color: #00bedd;
+    width: 70%;
 }
 
 .hi {
     color: #00bedd;
     font-weight: 900;
-    font-size: 1100%;
+    font-size: 1200%;
     margin-right: 2%;
 }
 
@@ -55,10 +51,10 @@ p {
 }
 
 .welcome {
-    color: white;
     font-weight: 300;
-    font-size: 120%;
-    margin-bottom: 0px;
+    color: white;
+    font-size: 100%;
+    margin-bottom: 5px;
 }
 
 .nameAndRole {
@@ -68,35 +64,47 @@ p {
 .whiteText {
     color: white;
     font-weight: 300;
-    font-size: 130%;
+    font-size: 120%;
+    margin: 0px;
 }
 
 .nameCont {
     display: flex;
     flex-direction: row;
+    margin-top: 10px;
 }
 
 .name {
     color: #00bedd;
-    font-weight: 600;
-    font-size: 130%;
+    font-weight: 700;
+    font-size: 120%;
+    margin: 0px;
 }
 
 .roleCont {
     display: flex;
     flex-direction: row;
-    margin: 2px 0px;
+    margin-top: 5px;
 }
 
-.roleText {
+.dev {
+    background-color: #00bedd;
+    color: white;
+    font-weight: 700;
+    font-size: 120%;
+    margin: 0px;
+}
+
+.des {
+    background-color: white;
     color: #00bedd;
-    font-weight: 600;
-    font-size: 130%;
+    font-weight: 700;
+    font-size: 120%;
     margin: 0px;
 }
 
 .btnsCont {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .buttons {
@@ -122,5 +130,112 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 1080px;
+    height: 100vh;
+}
+
+.aboutCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.aboutTitle {
+    font-weight: 800;
+}
+
+.aboutInfo {
+    font-size: 90%;
+}
+
+/* ------------ PROJECTS ------------ */
+.projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.projCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.projSecTitle {
+    color: white;
+    font-weight: 800;
+}
+
+.latestProj {
+    display: flex;
+    flex: row;
+    align-items: flex-start;
+    margin: 20px 0px;
+}
+
+.projImg {
+    width: 25%;
+    margin-right: 2%;
+}
+
+.projInfo {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 70%;
+}
+
+.projTitle {
+    font-size: 110%;
+    font-weight: 600;
+}
+
+.projSummary {
+    font-size: 90%;
+    font-weight: 300;
+}
+
+.projTech {
+    font-size: 90%;
+    font-weight: 600;
+}
+
+.projTechList {
+    display: flex;
+    flex-direction: row;
+}
+
+.projTechIcon {
+    width: 25px;
+    margin-right: 15px;
+}
+
+.projBtn {
+    background-color: transparent;
+    border: 1px solid #00bedd;
+    border-radius: 20px;
+    color: white;
+    padding: 5px 20px;
+    margin-top: 50px;
+    cursor: pointer;
+    width: 20%;
+    align-self: center;
+}
+
+.projBtn:hover {
+    background-color: white;
+    border: 1px solid white;
+    color: #00bedd;
+}
+
+/* ------------ SKILLS ------------ */
+.skills {
+    background-color: white;
+    box-shadow: 0px 0px 9px 2px #00bedd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }

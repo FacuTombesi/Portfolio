@@ -11,13 +11,13 @@ const NavBar = () => {
 
     return (
         <NavCont>
-            <Logo 
-                src={lightLogo}
-                alt="Facundo Tombesi"
-                title="Facundo Tombesi"
-                heigh="100%"
-                loading="lazy"
-            />
+            <a href="/" title="Facundo Tombesi">
+                <Logo 
+                    src={lightLogo}
+                    alt="Facundo Tombesi"
+                    loading="lazy"
+                />
+            </a>
             <NavLinksCont>
                 <NavLinks href='#home' onClick={(e) => handleClick(e, 'home') }>HOME</NavLinks>
                 <NavLinks href='#about' onClick={(e) => handleClick(e, 'about') }>ABOUT</NavLinks>
