@@ -1,0 +1,19 @@
+.contact {
+    background-color: #00a7af;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.contactCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.contactTitle {
+    color: white;
+    font-weight: 800;
+}

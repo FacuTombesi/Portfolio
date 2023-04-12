@@ -4,6 +4,7 @@ import NavBar from "../components/NavBar";
 import About from "../components/About";
 import ProjectsSection from "../components/ProjectsSection";
 import Skills from "../components/Skills";
+import Contact from "../components/Contact";
 import style from "../styles/Home.module.css";
 
 const Home = () => {
@@ -54,6 +55,7 @@ const Home = () => {
             <About />
             <ProjectsSection />
             <Skills />
+            <Contact />
         </div>
     );
 };

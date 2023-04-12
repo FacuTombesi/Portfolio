@@ -19,11 +19,11 @@ const NavBar = () => {
                 />
             </a>
             <NavLinksCont>
-                <NavLinks href='#home' onClick={(e) => handleClick(e, 'home') }>HOME</NavLinks>
-                <NavLinks href='#about' onClick={(e) => handleClick(e, 'about') }>ABOUT</NavLinks>
-                <NavLinks href='#projects' onClick={(e) => handleClick(e, 'projects') }>PROJECTS</NavLinks>
-                <NavLinks href='#skills' onClick={(e) => handleClick(e, 'skills') }>SKILLS</NavLinks>
-                <NavLinks href='#contact' onClick={(e) => handleClick(e, 'contact') }>CONTACT</NavLinks>
+                <NavLinks href="#home" onClick={(e) => handleClick(e, "home") }>HOME</NavLinks>
+                <NavLinks href="#about" onClick={(e) => handleClick(e, "about") }>ABOUT</NavLinks>
+                <NavLinks href="#projects" onClick={(e) => handleClick(e, "projects") }>PROJECTS</NavLinks>
+                <NavLinks href="#skills" onClick={(e) => handleClick(e, "skills") }>SKILLS</NavLinks>
+                <NavLinks href="#contact" onClick={(e) => handleClick(e, "contact") }>CONTACT</NavLinks>
             </NavLinksCont>
         </NavCont>
     );
