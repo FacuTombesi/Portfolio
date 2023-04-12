@@ -1,0 +1,80 @@
+.projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.projCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.projSecTitle {
+    color: white;
+    font-weight: 800;
+}
+
+.latestProj {
+    display: flex;
+    flex: row;
+    align-items: flex-start;
+    margin: 20px 0px;
+}
+
+.projImg {
+    width: 25%;
+    margin-right: 2%;
+}
+
+.projInfo {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 70%;
+}
+
+.projTitle {
+    font-size: 110%;
+    font-weight: 600;
+}
+
+.projSummary {
+    font-size: 90%;
+    font-weight: 300;
+}
+
+.projTech {
+    font-size: 90%;
+    font-weight: 600;
+}
+
+.projTechList {
+    display: flex;
+    flex-direction: row;
+}
+
+.projTechIcon {
+    width: 25px;
+    margin-right: 15px;
+}
+
+.projBtn {
+    background-color: transparent;
+    border: 1px solid #00bedd;
+    border-radius: 20px;
+    color: white;
+    padding: 5px 20px;
+    margin-top: 50px;
+    cursor: pointer;
+    width: 20%;
+    align-self: center;
+}
+
+.projBtn:hover {
+    background-color: white;
+    border: 1px solid white;
+    color: #00bedd;
+}
