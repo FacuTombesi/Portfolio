@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import style from "../styles/About.module.css";
+import styled from "styled-components";
+import ThemeContext from "../styles/darkMode/ThemeContext";
+
+const Container = styled.section `
+    background-color: ${({ theme }) => theme.backgroundColor};
+    color: ${({ theme }) => theme.textColor};
+    transition: background-color 0.5s, color 0.5s;
+`
 
 const About = () => {
+    const { theme } = useContext(ThemeContext);
+
     return (
-        <section className={style.about} id="about">
+        <Container theme={themes[theme]} className={style.about} id="about">
             <div className={style.aboutCont}>
                 <p className={style.aboutTitle}>ABOUT ME</p>
                 <hr color="#00bedd" width="10%" />
@@ -22,8 +32,21 @@ const About = () => {
                     </a>
                 </div>
             </div>
-        </section>
+        </Container>
     );
+};
+
+/* ---------------------------------- THEME STYLES ---------------------------------- */
+
+const themes = {
+    light: {
+        backgroundColor: "white",
+        textColor: "black",
+    },
+    dark: {
+        backgroundColor: "black",
+        textColor: "white",
+    },
 };
 
 export default About;

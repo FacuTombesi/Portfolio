@@ -1,0 +1,32 @@
+import React, { useContext } from "react";
+import styled from "styled-components";
+import iconLight from "../../assets/siteLIGHT.png";
+import iconDark from "../../assets/siteDARK.png";
+import ThemeContext from "./ThemeContext";
+
+const ToggleButton = () => {
+    const { theme, toggleTheme } = useContext(ThemeContext);
+
+    return (
+        <ToggleBtn onClick={toggleTheme}>
+            {theme === "light" 
+                ? <ToggleIcon src={iconLight} alt="Light Mode" />
+                : <ToggleIcon src={iconDark} alt="Dark Mode" />
+            }
+        </ToggleBtn>
+    );
+};
+
+/* ---------------------------------- STYLES ---------------------------------- */
+
+const ToggleBtn = styled.button `
+    border: none;
+    background: transparent;
+    cursor: pointer;
+`
+
+const ToggleIcon = styled.img `
+    width: 30px;
+`
+
+export default ToggleButton;

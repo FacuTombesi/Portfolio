@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import style from "../styles/Skills.module.css";
 import skillREACT from "../assets/skillREACT.png";
 import skillREDUX from "../assets/skillREDUX.png";
@@ -13,10 +13,20 @@ import skillADOBEXD from "../assets/skillADOBEXD.png";
 import skillAFTEREFFECTS from "../assets/skillAFTEREFFECTS.png";
 import skillILLUSTRATOR from "../assets/skillILLUSTRATOR.png";
 import skillPREMIEREPRO from "../assets/skillPREMIEREPRO.png";
+import styled from "styled-components";
+import ThemeContext from "../styles/darkMode/ThemeContext";
+
+const Container = styled.section `
+    background-color: ${({ theme }) => theme.backgroundColor};
+    color: ${({ theme }) => theme.textColor};
+    transition: background-color 0.5s, color 0.5s;
+`
 
 const Skills = () => {
+    const { theme } = useContext(ThemeContext);
+
     return (
-        <section className={style.skills} id="skills">
+        <Container theme={themes[theme]} className={style.skills} id="skills">
             <div className={style.skillsCont}>
                 <p className={style.skillsTitle}>TECH SKILLS</p>
                 <hr color='#00bedd' width='10%' />
@@ -168,8 +178,21 @@ const Skills = () => {
                 </div>
                 
             </div>
-        </section>
+        </Container>
     );
+};
+
+/* ---------------------------------- THEME STYLES ---------------------------------- */
+
+const themes = {
+    light: {
+        backgroundColor: "white",
+        textColor: "black",
+    },
+    dark: {
+        backgroundColor: "black",
+        textColor: "white",
+    },
 };
 
 export default Skills;
