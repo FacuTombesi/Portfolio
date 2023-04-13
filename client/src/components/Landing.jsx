@@ -1,37 +1,40 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import LangContext from "../styles/language/LangContext";
 
 const Landing = () => {
+    const { lang } = useContext(LangContext);
+
     return (
-        <Container id="home">
+        <Container lang={langs[lang]} id="home">
             <Banner>
-                <Hi>Hi!</Hi>
-                <div>
-                    <Welcome>Welcome to my portfolio</Welcome>
+                <Hi>{langs[lang].salute}</Hi>
+                <BannerInfo>
+                    <Welcome>{langs[lang].welcome}</Welcome>
                     <hr color='#00bedd' width='100%' />
                     <NameAndRole>
                         <NameCont>
-                            <WhiteText>My name is &nbsp;</WhiteText>
-                            <Name>Facundo Tombesi</Name>
+                            <WhiteText>{langs[lang].myName} &nbsp;</WhiteText>
+                            <Name>{langs[lang].name}</Name>
                         </NameCont>
                         <RoleCont>
-                            <WhiteText>and I'm a &nbsp;</WhiteText>
-                            <RoleDev>Full Stack Developer</RoleDev>
+                            <WhiteText>{langs[lang].andIm} &nbsp;</WhiteText>
+                            <RoleDev>{langs[lang].dev}</RoleDev>
                         </RoleCont>
                         <RoleCont>
-                            <WhiteText>and &nbsp;</WhiteText>
-                            <RoleDes>Multimedia Designer</RoleDes>
+                            <WhiteText>{langs[lang].andA} &nbsp;</WhiteText>
+                            <RoleDes>{langs[lang].des}</RoleDes>
                         </RoleCont>
                     </NameAndRole>
                     <BtnsCont>
-                    <a href="https://www.linkedin.com/in/facundotombesi/" target="_blank">
+                    <a href="https://www.linkedin.com/in/facundotombesi/" target="_blank" rel="noreferrer">
                         <Buttons>LinkedIn</Buttons>
                     </a>
-                    <a href="https://github.com/FacuTombesi" target="_blank">
+                    <a href="https://github.com/FacuTombesi" target="_blank" rel="noreferrer">
                         <Buttons>GitHub</Buttons>
                     </a>
                     </BtnsCont>
-                </div>
+                </BannerInfo>
             </Banner>
         </Container>
     );
@@ -43,7 +46,7 @@ const Container = styled.section `
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 1080px;
+    height: 100vh;
 `
 
 const Banner = styled.div `
@@ -51,64 +54,77 @@ const Banner = styled.div `
     flex-direction: row;
     align-items: flex-end;
     justify-content: center;
-    width: 50%;
+    width: 70%;
 `
 
 const Hi = styled.p `
-    font-family: 'Roboto', sans-serif;
     color: #00bedd;
     font-weight: 900;
     font-size: 1100%;
     margin-right: 2%;
 `
 
+const BannerInfo = styled.div `
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+`
+
 const Welcome = styled.p `
     font-weight: 300;
-    font-size: 120%;
-    margin-bottom: 0px;
+    color: white;
+    font-size: 100%;
+    margin-bottom: 5px;
 `
 
 const NameAndRole = styled.div `
-    margin-top: 15px;
+    margin-top: 0px;
 `
 
 const WhiteText = styled.p `
+    color: white;
     font-weight: 300;
-    font-size: 130%;
+    font-size: 120%;
+    margin: 0px;
 `
 
 const NameCont = styled.div `
     display: flex;
     flex-direction: row;
+    margin-top: 10px;
 `
 
 const Name = styled.p `
     color: #00bedd;
-    font-weight: 600;
-    font-size: 130%;
+    font-weight: 700;
+    font-size: 120%;
+    margin: 0px;
 `
 
 const RoleCont = styled.div `
     display: flex;
     flex-direction: row;
-    margin: 2px 0px;
+    margin-top: 5px;
 `
 
 const RoleDev = styled.p `
     background-color: #00bedd;
-    font-weight: 600;
-    font-size: 130%;
+    color: white;
+    font-weight: 700;
+    font-size: 120%;
+    margin: 0px;
 `
 
 const RoleDes = styled.p `
     background-color: white;
     color: #00bedd;
-    font-weight: 600;
-    font-size: 130%;
+    font-weight: 700;
+    font-size: 120%;
+    margin: 0px;
 `
 
 const BtnsCont = styled.div `
-    margin-top: 20px;
+    margin-top: 40px;
 `
 
 const Buttons = styled.button `
@@ -126,5 +142,30 @@ const Buttons = styled.button `
         color: #00bedd;
     }
 `
+
+/* ---------------------------------- LANGUAGES ---------------------------------- */
+
+const langs = {
+    en: {
+        salute: "Hi!",
+        welcome: "Welcome to my portfolio",
+        myName: "My name is",
+        name: "Facundo Tombesi",
+        andIm: "and I'm a",
+        dev: "Full Stack Developer",
+        andA: "and a",
+        des: "Multimedia Designer",
+    },
+    es: {
+        salute: "Hola!",
+        welcome: "Bienvenidos a mi portfolio",
+        myName: "Me llamo",
+        name: "Facundo Tombesi",
+        andIm: "y soy un",
+        dev: "Desarrollador Full Stack",
+        andA: "y",
+        des: "Diseñador Multimedia",
+    },
+};
 
 export default Landing;

@@ -8,6 +8,7 @@ import iconLINKEDINwhite from "../assets/iconLINKEDIN(white).png";
 import iconMAIL from "../assets/iconMAIL.png";
 import iconMAILwhite from "../assets/iconMAIL(white).png";
 import ThemeContext from "../styles/darkMode/ThemeContext";
+import LangContext from "../styles/language/LangContext";
 
 const Container = styled.section `
     background-color: ${({ theme }) => theme.backgroundColor};
@@ -20,11 +21,12 @@ const Contact = () => {
     const [linkedinSrc, setLinkedinSrc] = useState(iconLINKEDINwhite);
     const [githubSrc, setGithubSrc] = useState(iconGITHUBwhite);
     const { theme } = useContext(ThemeContext);
+    const { lang } = useContext(LangContext);
 
     return (
-        <Container theme={themes[theme]} className={style.contact} id="contact">
+        <Container theme={themes[theme]} lang={langs[lang]} className={style.contact} id="contact">
             <div className={style.contactCont}>
-                <p className={style.contactTitle}>CONTACT</p>
+                <p className={style.contactTitle}>{langs[lang].title}</p>
                 <hr color="white" width="10%" />
                 <div className={style.iconsCont}>
                     <a href="mailto:facundomtombesi@gmail.com" target="_blank" rel="noreferrer">
@@ -76,6 +78,17 @@ const themes = {
     dark: {
         backgroundColor: "#005257",
         textColor: "white",
+    },
+};
+
+/* ---------------------------------- LANGUAGES ---------------------------------- */
+
+const langs = {
+    en: {
+        title: "CONTACT",
+    },
+    es: {
+        title: "CONTACTO",
     },
 };
 

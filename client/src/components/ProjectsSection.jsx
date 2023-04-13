@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import style from "../styles/ProjectsSection.module.css";
 import projOne from "../assets/thumbnailsVOYHENRY.jpg";
 import projTwo from "../assets/thumbnailsFOODPI.jpg";
@@ -13,12 +13,15 @@ import skillHTML from "../assets/skillHTML.png";
 import skillCSS from "../assets/skillCSS.png";
 import skillADOBEXD from "../assets/skillADOBEXD.png";
 import skillILLUSTRATOR from "../assets/skillILLUSTRATOR.png";
+import LangContext from "../styles/language/LangContext";
 
 const ProjectsSection = () => {
+    const { lang } = useContext(LangContext);
+
     return (
-        <section className={style.projects} id="projects">
+        <section lang={langs[lang]} className={style.projects} id="projects">
             <div className={style.projCont}>
-                <p className={style.projSecTitle}>LATEST PROJECTS</p>
+                <p className={style.projSecTitle}>{langs[lang].title}</p>
                 <hr color='#00bedd' width='10%' />
                 {/* ------------- PROJECT 1 ------------- */}
                 <a href="/projects/voyhenry">
@@ -33,10 +36,8 @@ const ProjectsSection = () => {
                         <div className={style.projInfo}>
                             <p className={style.projTitle}>voyHenry</p>
                             <hr color='#00bedd' width='10%' />
-                            <p className={style.projSummary}>
-                                Group project made for the last instance of the Fullstack Developer course at Henry.
-                            </p>
-                            <p className={style.projTech}>Tech used:&nbsp;</p>
+                            <p className={style.projSummary}>{langs[lang].projOneSummary}</p>
+                            <p className={style.projTech}>{langs[lang].techUsed}&nbsp;</p>
                             <div className={style.projTechList}>
                                 <img
                                     className={style.projTechIcon}
@@ -133,10 +134,8 @@ const ProjectsSection = () => {
                         <div className={style.projInfo}>
                             <p className={style.projTitle}>Food PI</p>
                             <hr color='#00bedd' width='10%' />
-                            <p className={style.projSummary}>
-                                PI (Individual Proyect) made for the last instance of the Fullstack Developer course at Henry.
-                            </p>
-                            <p className={style.projTech}>Tech used:&nbsp;</p>
+                            <p className={style.projSummary}>{langs[lang].projTwoSummary}</p>
+                            <p className={style.projTech}>{langs[lang].techUsed}&nbsp;</p>
                             <div className={style.projTechList}>
                                 <img
                                     className={style.projTechIcon}
@@ -200,11 +199,30 @@ const ProjectsSection = () => {
                 </a>
                 {/* ------------------------------------- */}
                 <a href="/projects" style={{ textAlign: "center" }}>
-                    <button className={style.projBtn}>See more</button>
+                    <button className={style.projBtn}>{langs[lang].button}</button>
                 </a>
             </div>
         </section>
     );
+};
+
+/* ---------------------------------- LANGUAGES ---------------------------------- */
+
+const langs = {
+    en: {
+        title: "LATEST PROJECTS",
+        projOneSummary: "Group project made for the last instance of the Fullstack Developer course at Henry.",
+        projTwoSummary: "PI (Individual Proyect) made for the last instance of the Fullstack Developer course at Henry.",
+        techUsed: "Tech used:",
+        button: "See more",
+    },
+    es: {
+        title: "PROYECTOS RECIENS",
+        projOneSummary: "Proyecto grupal realizado para la última instancia del curso Fullstack Developer en Henry.",
+        projTwoSummary: "PI (Proyecto Individual) realizado para la última instancia del curso Fullstack Developer en Henry.",
+        techUsed: "Tecnologías usadas:",
+        button: "Ver más",
+    },
 };
 
 export default ProjectsSection;

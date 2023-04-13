@@ -1,3 +1,26 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background-image: url('./assets/portfolioBG.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+}
+
+p {
+  margin: 10px 0px;
+}
+
+hr {
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
 .App {
   text-align: center;
   text-decoration: none;

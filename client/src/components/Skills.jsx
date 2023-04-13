@@ -15,6 +15,7 @@ import skillILLUSTRATOR from "../assets/skillILLUSTRATOR.png";
 import skillPREMIEREPRO from "../assets/skillPREMIEREPRO.png";
 import styled from "styled-components";
 import ThemeContext from "../styles/darkMode/ThemeContext";
+import LangContext from "../styles/language/LangContext";
 
 const Container = styled.section `
     background-color: ${({ theme }) => theme.backgroundColor};
@@ -24,11 +25,12 @@ const Container = styled.section `
 
 const Skills = () => {
     const { theme } = useContext(ThemeContext);
+    const { lang } = useContext(LangContext);
 
     return (
-        <Container theme={themes[theme]} className={style.skills} id="skills">
+        <Container theme={themes[theme]} lang={langs[lang]} className={style.skills} id="skills">
             <div className={style.skillsCont}>
-                <p className={style.skillsTitle}>TECH SKILLS</p>
+                <p className={style.skillsTitle}>{langs[lang].titleOne}</p>
                 <hr color='#00bedd' width='10%' />
                 <div className={style.skillsIconCont}>
                     <div className={style.skillsIconColumn}>
@@ -128,7 +130,7 @@ const Skills = () => {
                         </div>
                     </div>
                 </div>
-                <p className={style.skillsTitle}>DESIGN SKILLS</p>
+                <p className={style.skillsTitle}>{langs[lang].titleTwo}</p>
                 <hr color='#00bedd' width='10%' />
                 <div className={style.skillsIconCont}>
                     <div className={style.skillsIconColumn}>
@@ -192,6 +194,19 @@ const themes = {
     dark: {
         backgroundColor: "black",
         textColor: "white",
+    },
+};
+
+/* ---------------------------------- LANGUAGES ---------------------------------- */
+
+const langs = {
+    en: {
+        titleOne: "TECH SKILLS",
+        titleTwo: "DESIGN SKILLS",
+    },
+    es: {
+        titleOne: "HABILIDADES DE DESARROLLO",
+        titleTwo: "HABILIDADES DE DISEÑO",
     },
 };
 
