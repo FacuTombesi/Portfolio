@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+/* Hide the scrollbar, except for the thumb */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00bedd;
+  border-radius: 10px;
+}

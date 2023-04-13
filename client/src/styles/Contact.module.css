@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 40vh;
 }
 
 .contactCont {
@@ -16,4 +16,16 @@
 .contactTitle {
     color: white;
     font-weight: 800;
+}
+
+.iconsCont {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.socialIcon {
+    width: 80px;
+    margin: 0px 80px;
 }
