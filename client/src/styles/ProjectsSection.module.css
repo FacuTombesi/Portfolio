@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    width: 100%;
 }
 
 .projCont {
@@ -77,4 +78,46 @@
     background-color: white;
     border: 1px solid white;
     color: #00bedd;
+}
+
+@media (max-width: 768px) {
+    .projects {
+        height: -webkit-fill-available;
+        padding: 140px 0px;
+    }
+
+    .projCont {
+        width: 90%;
+    }
+
+    .latestProj {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projImg {
+        margin: 0px;
+    }
+
+    .projInfo {
+        align-items: center;
+        width: 90%;
+    }
+
+    .projSummary {
+        display: none;
+    }
+
+    .projTech {
+        display: none;
+    }
+
+    .projTechList {
+        flex-wrap: wrap;
+        margin: 20px 0px;
+    }
+
+    .projTechIcon {
+        margin: 0px 5px;
+    }
 }

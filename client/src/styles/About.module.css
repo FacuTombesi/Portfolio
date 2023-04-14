@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    width: 100%;
 }
 
 .aboutCont {
@@ -38,4 +39,29 @@
 .buttons:hover {
     background-color: white;
     color: #00bedd;
+}
+
+@media (max-width: 768px) {
+    .about {
+        height: -webkit-fill-available;
+        padding: 140px 0px;
+    }
+
+    .aboutCont {
+        width: 90%;
+    }
+
+    .aboutInfo {
+        font-size: 100%;
+    }
+
+    .btnsCont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons {
+        margin: 10px 0px;
+    }
 }

@@ -1,0 +1,150 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    width: 70%;
+}
+
+.hi {
+    color: #00bedd;
+    font-weight: 900;
+    font-size: 1100%;
+    margin-right: 2%;
+}
+
+.bannerInfo {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+
+.welcome {
+    font-weight: 300;
+    color: white;
+    font-size: 100%;
+    margin-bottom: 5px;
+}
+
+.nameAndRole {
+    margin-top: 0px;
+}
+
+.whiteText {
+    color: white;
+    font-weight: 300;
+    font-size: 120%;
+    margin: 0px;
+}
+
+.nameCont {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.name {
+    color: #00bedd;
+    font-weight: 700;
+    font-size: 120%;
+    margin: 0px;
+}
+
+.roleCont {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+}
+
+.roleDev {
+    background-color: #00bedd;
+    color: white;
+    font-weight: 700;
+    font-size: 120%;
+    margin: 0px;
+}
+
+.roleDes {
+    background-color: white;
+    color: #00bedd;
+    font-weight: 700;
+    font-size: 120%;
+    margin: 0px;
+}
+
+.btnsCont {
+    margin-top: 40px;
+}
+
+.buttons {
+    background-color: transparent;
+    border: 1px solid #00bedd;
+    border-radius: 20px;
+    color: white;
+    padding: 5px 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.buttons:hover {
+    background-color: white;
+    border: 1px solid white;
+    color: #00bedd;
+}
+
+@media (max-width: 768px) {
+    .container {
+        height: -webkit-fill-available;
+        padding: 140px 0px;
+    }
+
+    .banner {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hi {
+        margin: 0px;
+    }
+
+    .bannerInfo {
+        width: 100%;
+    }
+
+    .whiteText {
+        font-size: 100%;
+    }
+
+    .name {
+        font-size: 100%;
+    }
+
+    .roleDev {
+        font-size: 100%;
+    }
+
+    .roleDes {
+        font-size: 100%;
+    }
+
+    .btnsCont {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        align-items: center;
+    }
+
+    .buttons {
+        margin: 10px 0px;
+        width: 150px;
+    }
+}

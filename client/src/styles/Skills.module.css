@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    width: 100%;
 }
 
 .skillsCont {
@@ -45,4 +46,24 @@
 .skillName {
     font-size: 100%;
     font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    .skills {
+        height: -webkit-fill-available;
+        padding: 140px 0px;
+    }
+
+    .skillsCont {
+        width: 90%;
+    }
+
+    .skillsIconColumn {
+        margin-right: 80px;
+    }
+
+    .skillIcon {
+        width: 40px;
+        margin-right: 10px;
+    }
 }

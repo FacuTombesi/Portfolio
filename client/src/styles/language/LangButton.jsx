@@ -23,10 +23,11 @@ const ToggleBtn = styled.button `
     border: none;
     background: transparent;
     cursor: pointer;
+    margin: 15px;
 `
 
 const ToggleIcon = styled.img `
-    width: 30px;
+    width: 25px;
 `
 
 export default LangButton;
