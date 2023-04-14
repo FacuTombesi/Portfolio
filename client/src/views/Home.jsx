@@ -12,6 +12,7 @@ const Home = () => {
         <div>
             <ScrollToTop 
                 smooth="true"
+                top="60"
                 color="white"
                 width="22px"
                 height="22px"

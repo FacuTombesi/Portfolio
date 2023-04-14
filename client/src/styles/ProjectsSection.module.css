@@ -21,7 +21,7 @@
 .latestProj {
     display: flex;
     flex: row;
-    align-items: flex-start;
+    align-items: center;
     margin: 20px 0px;
 }
 
@@ -43,6 +43,22 @@
 }
 
 .projSummary {
+    font-size: 90%;
+    font-weight: 300;
+}
+
+.projDate {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.projDateTitle {
+    font-size: 90%;
+    font-weight: 600;
+}
+
+.projDateDate {
     font-size: 90%;
     font-weight: 300;
 }
@@ -108,13 +124,17 @@
         display: none;
     }
 
+    .projDateTitle {
+        display: none;
+    }
+
     .projTech {
         display: none;
     }
 
     .projTechList {
         flex-wrap: wrap;
-        margin: 20px 0px;
+        margin: 10px 0px;
     }
 
     .projTechIcon {

@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { useLocation } from "react-router-dom";
 import "../styles/NavBar.css";
 import styled from "styled-components";
 import darkLogo from "../assets/logo(lightMode).png";
@@ -24,14 +25,16 @@ const NavBar = () => {
     const { theme } = useContext(ThemeContext);
     const { lang } = useContext(LangContext);
     const [isOpen, setIsOpen] = useState(false);
+    const location = useLocation();
 
     const handleClick = (e, sectionId) => {
         e.preventDefault();
-        const section = document.getElementById(sectionId)
-        section.scrollIntoView({ behavior: "smooth" })
+        const section = document.getElementById(sectionId);
+        section.scrollIntoView({ behavior: "smooth" });
     };
 
     const logo = theme === "light" ? darkLogo : lightLogo;
+    const isHome = location.pathname === "/";
 
     return (
         <Container theme={themes[theme]} lang={langs[lang]}>
@@ -44,11 +47,15 @@ const NavBar = () => {
                 />
             </a>
             <div className={`navLinksCont ${isOpen && "open"}`}>
-                <p className="navLinks" href="#home" onClick={(e) => handleClick(e, "home")}>{langs[lang].home}</p>
-                <p className="navLinks" href="#about" onClick={(e) => handleClick(e, "about")}>{langs[lang].about}</p>
-                <p className="navLinks" href="#projects" onClick={(e) => handleClick(e, "projects")}>{langs[lang].projects}</p>
-                <p className="navLinks" href="#skills" onClick={(e) => handleClick(e, "skills")}>{langs[lang].skills}</p>
-                <p className="navLinks" href="#contact" onClick={(e) => handleClick(e, "contact")}>{langs[lang].contact}</p>
+                {isHome && (
+                    <>
+                        <p className="navLinks" href="#home" onClick={(e) => handleClick(e, "home")}>{langs[lang].home}</p>
+                        <p className="navLinks" href="#about" onClick={(e) => handleClick(e, "about")}>{langs[lang].about}</p>
+                        <p className="navLinks" href="#projects" onClick={(e) => handleClick(e, "projects")}>{langs[lang].projects}</p>
+                        <p className="navLinks" href="#skills" onClick={(e) => handleClick(e, "skills")}>{langs[lang].skills}</p>
+                        <p className="navLinks" href="#contact" onClick={(e) => handleClick(e, "contact")}>{langs[lang].contact}</p>
+                    </>
+                )}
                 <div className="toggleCont">
                     <ToggleButton />
                     <LangButton />
