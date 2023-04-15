@@ -2,12 +2,14 @@ import React, { useContext, useState } from "react";
 import { useLocation } from "react-router-dom";
 import "../styles/NavBar.css";
 import styled from "styled-components";
-import darkLogo from "../assets/logo(lightMode).png";
-import lightLogo from "../assets/logo(darkMode).png";
+import darkLogo from "../assets/img/logo(lightMode).png";
+import lightLogo from "../assets/img/logo(darkMode).png";
 import ThemeContext from "../styles/darkMode/ThemeContext";
 import ToggleButton from "../styles/darkMode/ToggleButton";
 import LangContext from "../styles/language/LangContext";
 import LangButton from "../styles/language/LangButton";
+import themes from "../styles/darkMode/themes.json";
+import langs from "../styles/language/langs.json";
 
 const Container = styled.div `
     display: flex;
@@ -49,11 +51,11 @@ const NavBar = () => {
             <div className={`navLinksCont ${isOpen && "open"}`}>
                 {isHome && (
                     <>
-                        <p className="navLinks" href="#home" onClick={(e) => handleClick(e, "home")}>{langs[lang].home}</p>
-                        <p className="navLinks" href="#about" onClick={(e) => handleClick(e, "about")}>{langs[lang].about}</p>
-                        <p className="navLinks" href="#projects" onClick={(e) => handleClick(e, "projects")}>{langs[lang].projects}</p>
-                        <p className="navLinks" href="#skills" onClick={(e) => handleClick(e, "skills")}>{langs[lang].skills}</p>
-                        <p className="navLinks" href="#contact" onClick={(e) => handleClick(e, "contact")}>{langs[lang].contact}</p>
+                        <p className="navLinks" href="#home" onClick={(e) => handleClick(e, "home")}>{langs[lang].nav_home}</p>
+                        <p className="navLinks" href="#about" onClick={(e) => handleClick(e, "about")}>{langs[lang].nav_about}</p>
+                        <p className="navLinks" href="#projects" onClick={(e) => handleClick(e, "projects")}>{langs[lang].nav_projects}</p>
+                        <p className="navLinks" href="#skills" onClick={(e) => handleClick(e, "skills")}>{langs[lang].nav_skills}</p>
+                        <p className="navLinks" href="#contact" onClick={(e) => handleClick(e, "contact")}>{langs[lang].nav_contact}</p>
                     </>
                 )}
                 <div className="toggleCont">
@@ -68,38 +70,6 @@ const NavBar = () => {
             </div>
         </Container>
     );
-};
-
-/* ---------------------------------- THEME STYLES ---------------------------------- */
-
-const themes = {
-    light: {
-        backgroundColor: "white",
-        textColor: "black",
-    },
-    dark: {
-        backgroundColor: "black",
-        textColor: "white",
-    },
-};
-
-/* ---------------------------------- LANGUAGES ---------------------------------- */
-
-const langs = {
-    en: {
-        home: "HOME",
-        about: "ABOUT",
-        projects: "PROJECTS",
-        skills: "SKILLS",
-        contact: "CONTACT",
-    },
-    es: {
-        home: "INICIO",
-        about: "SOBRE MÍ",
-        projects: "PROYECTOS",
-        skills: "HABILIDADES",
-        contact: "CONTACTO",
-    },
 };
 
 export default NavBar;

@@ -1,21 +1,25 @@
 import React, { useContext } from "react";
 import style from "../styles/Skills.module.css";
-import skillREACT from "../assets/skillREACT.png";
-import skillREDUX from "../assets/skillREDUX.png";
-import skillJAVASCRIPT from "../assets/skillJAVASCRIPT.png";
-import skillNODEJS from "../assets/skillNODEJS.png";
-import skillEXPRESS from "../assets/skillEXPRESS.png";
-import skillSEQUELIZE from "../assets/skillSEQUELIZE.png";
-import skillPOSTGRESQL from "../assets/skillPOSTGRESQL.png";
-import skillHTML from "../assets/skillHTML.png";
-import skillCSS from "../assets/skillCSS.png";
-import skillADOBEXD from "../assets/skillADOBEXD.png";
-import skillAFTEREFFECTS from "../assets/skillAFTEREFFECTS.png";
-import skillILLUSTRATOR from "../assets/skillILLUSTRATOR.png";
-import skillPREMIEREPRO from "../assets/skillPREMIEREPRO.png";
 import styled from "styled-components";
 import ThemeContext from "../styles/darkMode/ThemeContext";
 import LangContext from "../styles/language/LangContext";
+import themes from "../styles/darkMode/themes.json";
+import langs from "../styles/language/langs.json";
+
+/* ---------- SKILLS ---------- */
+import skillREACT from "../assets/img/skillREACT.png";
+import skillREDUX from "../assets/img/skillREDUX.png";
+import skillJAVASCRIPT from "../assets/img/skillJAVASCRIPT.png";
+import skillNODEJS from "../assets/img/skillNODEJS.png";
+import skillEXPRESS from "../assets/img/skillEXPRESS.png";
+import skillSEQUELIZE from "../assets/img/skillSEQUELIZE.png";
+import skillPOSTGRESQL from "../assets/img/skillPOSTGRESQL.png";
+import skillHTML from "../assets/img/skillHTML.png";
+import skillCSS from "../assets/img/skillCSS.png";
+import skillADOBEXD from "../assets/img/skillADOBEXD.png";
+import skillAFTEREFFECTS from "../assets/img/skillAFTEREFFECTS.png";
+import skillILLUSTRATOR from "../assets/img/skillILLUSTRATOR.png";
+import skillPREMIEREPRO from "../assets/img/skillPREMIEREPRO.png";
 
 const Container = styled.section `
     background-color: ${({ theme }) => theme.backgroundColor};
@@ -30,7 +34,7 @@ const Skills = () => {
     return (
         <Container theme={themes[theme]} lang={langs[lang]} className={style.skills} id="skills">
             <div className={style.skillsCont}>
-                <p className={style.skillsTitle}>{langs[lang].titleOne}</p>
+                <p className={style.skillsTitle}>{langs[lang].skl_titleOne}</p>
                 <hr color='#00bedd' width='10%' />
                 <div className={style.skillsIconCont}>
                     <div className={style.skillsIconColumn}>
@@ -130,7 +134,7 @@ const Skills = () => {
                         </div>
                     </div>
                 </div>
-                <p className={style.skillsTitle}>{langs[lang].titleTwo}</p>
+                <p className={style.skillsTitle}>{langs[lang].skl_titleTwo}</p>
                 <hr color='#00bedd' width='10%' />
                 <div className={style.skillsIconCont}>
                     <div className={style.skillsIconColumn}>
@@ -182,32 +186,6 @@ const Skills = () => {
             </div>
         </Container>
     );
-};
-
-/* ---------------------------------- THEME STYLES ---------------------------------- */
-
-const themes = {
-    light: {
-        backgroundColor: "white",
-        textColor: "black",
-    },
-    dark: {
-        backgroundColor: "black",
-        textColor: "white",
-    },
-};
-
-/* ---------------------------------- LANGUAGES ---------------------------------- */
-
-const langs = {
-    en: {
-        titleOne: "TECH SKILLS",
-        titleTwo: "DESIGN SKILLS",
-    },
-    es: {
-        titleOne: "HABILIDADES DE DESARROLLO",
-        titleTwo: "HABILIDADES DE DISEÑO",
-    },
 };
 
 export default Skills;

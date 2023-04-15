@@ -3,21 +3,22 @@ import style from "../../styles/cards/Cards.module.css";
 import styled from "styled-components";
 import ThemeContext from "../../styles/darkMode/ThemeContext";
 import LangContext from "../../styles/language/LangContext";
+import themes from "../../styles/darkMode/themes.json";
 
-import projThumbnail from "../../assets/thumbnailsVOYHENRY.jpg";
+import projThumbnail from "../../assets/img/thumbnailsVOYHENRY.jpg";
 
 /* ---------- SKILLS ---------- */
-import skillREACT from "../../assets/skillREACT.png";
-import skillREDUX from "../../assets/skillREDUX.png";
-import skillJAVASCRIPT from "../../assets/skillJAVASCRIPT.png";
-import skillNODEJS from "../../assets/skillNODEJS.png";
-import skillEXPRESS from "../../assets/skillEXPRESS.png";
-import skillSEQUELIZE from "../../assets/skillSEQUELIZE.png";
-import skillPOSTGRESQL from "../../assets/skillPOSTGRESQL.png";
-import skillHTML from "../../assets/skillHTML.png";
-import skillCSS from "../../assets/skillCSS.png";
-import skillADOBEXD from "../../assets/skillADOBEXD.png";
-import skillILLUSTRATOR from "../../assets/skillILLUSTRATOR.png";
+import skillREACT from "../../assets/img/skillREACT.png";
+import skillREDUX from "../../assets/img/skillREDUX.png";
+import skillJAVASCRIPT from "../../assets/img/skillJAVASCRIPT.png";
+import skillNODEJS from "../../assets/img/skillNODEJS.png";
+import skillEXPRESS from "../../assets/img/skillEXPRESS.png";
+import skillSEQUELIZE from "../../assets/img/skillSEQUELIZE.png";
+import skillPOSTGRESQL from "../../assets/img/skillPOSTGRESQL.png";
+import skillHTML from "../../assets/img/skillHTML.png";
+import skillCSS from "../../assets/img/skillCSS.png";
+import skillADOBEXD from "../../assets/img/skillADOBEXD.png";
+import skillILLUSTRATOR from "../../assets/img/skillILLUSTRATOR.png";
 
 const Container = styled.section `
     background-color: ${({ theme }) => theme.backgroundColor};
@@ -134,19 +135,6 @@ const VoyHenryCard = () => {
             </div>
         </Container>
     );
-};
-
-/* ---------------------------------- THEME STYLES ---------------------------------- */
-
-const themes = {
-    light: {
-        backgroundColor: "white",
-        textColor: "black",
-    },
-    dark: {
-        backgroundColor: "black",
-        textColor: "white",
-    },
 };
 
 /* ---------------------------------- LANGUAGES ---------------------------------- */

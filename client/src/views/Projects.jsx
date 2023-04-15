@@ -5,6 +5,7 @@ import styled from "styled-components";
 import NavBar from "../components/NavBar";
 import ThemeContext from "../styles/darkMode/ThemeContext";
 import LangContext from "../styles/language/LangContext";
+import themes from "../styles/darkMode/themes.json";
 
 /* ---------- PROJECTS ---------- */
 import FoodPICard from "../projects/cards/FoodPICard";
@@ -53,19 +54,6 @@ const Projects = () => {
             </div>
         </div>
     );
-};
-
-/* ---------------------------------- THEME STYLES ---------------------------------- */
-
-const themes = {
-    light: {
-        backgroundColor: "white",
-        textColor: "black",
-    },
-    dark: {
-        backgroundColor: "black",
-        textColor: "white",
-    },
 };
 
 /* ---------------------------------- LANGUAGES ---------------------------------- */

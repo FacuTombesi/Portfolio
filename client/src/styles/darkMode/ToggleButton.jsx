@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import iconLight from "../../assets/siteLIGHT.png";
-import iconDark from "../../assets/siteDARK.png";
+import iconLight from "../../assets/img/siteLIGHT.png";
+import iconDark from "../../assets/img/siteDARK.png";
 import ThemeContext from "./ThemeContext";
 
 const ToggleButton = () => {

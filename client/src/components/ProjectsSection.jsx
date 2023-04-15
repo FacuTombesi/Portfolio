@@ -1,23 +1,25 @@
 import React, { useContext } from "react";
 import style from "../styles/ProjectsSection.module.css";
 import LangContext from "../styles/language/LangContext";
+import langs from "../styles/language/langs.json";
+import projects from "../assets/projects/projects.json";
 
 /* ---------- PROJECTS ---------- */
-import projOne from "../assets/thumbnailsPORTFOLIO.jpg";
-import projTwo from "../assets/thumbnailsVOYHENRY.jpg";
+import projOne from "../assets/img/thumbnailsPORTFOLIO.jpg";
+import projTwo from "../assets/img/thumbnailsVOYHENRY.jpg";
 
 /* ---------- SKILLS ---------- */
-import skillREACT from "../assets/skillREACT.png";
-import skillREDUX from "../assets/skillREDUX.png";
-import skillJAVASCRIPT from "../assets/skillJAVASCRIPT.png";
-import skillNODEJS from "../assets/skillNODEJS.png";
-import skillEXPRESS from "../assets/skillEXPRESS.png";
-import skillSEQUELIZE from "../assets/skillSEQUELIZE.png";
-import skillPOSTGRESQL from "../assets/skillPOSTGRESQL.png";
-import skillHTML from "../assets/skillHTML.png";
-import skillCSS from "../assets/skillCSS.png";
-import skillADOBEXD from "../assets/skillADOBEXD.png";
-import skillILLUSTRATOR from "../assets/skillILLUSTRATOR.png";
+import skillREACT from "../assets/img/skillREACT.png";
+import skillREDUX from "../assets/img/skillREDUX.png";
+import skillJAVASCRIPT from "../assets/img/skillJAVASCRIPT.png";
+import skillNODEJS from "../assets/img/skillNODEJS.png";
+import skillEXPRESS from "../assets/img/skillEXPRESS.png";
+import skillSEQUELIZE from "../assets/img/skillSEQUELIZE.png";
+import skillPOSTGRESQL from "../assets/img/skillPOSTGRESQL.png";
+import skillHTML from "../assets/img/skillHTML.png";
+import skillCSS from "../assets/img/skillCSS.png";
+import skillADOBEXD from "../assets/img/skillADOBEXD.png";
+import skillILLUSTRATOR from "../assets/img/skillILLUSTRATOR.png";
 
 const ProjectsSection = () => {
     const { lang } = useContext(LangContext);
@@ -25,7 +27,7 @@ const ProjectsSection = () => {
     return (
         <section lang={langs[lang]} className={style.projects} id="projects">
             <div className={style.projCont}>
-                <p className={style.projSecTitle}>{langs[lang].title}</p>
+                <p className={style.projSecTitle}>{langs[lang].prj_title}</p>
                 <hr color='#00bedd' width='10%' />
                 {/* ------------- PROJECT 1 ------------- */}
                 <a href="/projects/portfolio">
@@ -38,14 +40,14 @@ const ProjectsSection = () => {
                             loading="lazy"
                         />
                         <div className={style.projInfo}>
-                            <p className={style.projTitle}>FT Portfolio</p>
+                            <p className={style.projTitle}>{projects.portfolio[lang].name}</p>
                             <hr color='#00bedd' width='10%' />
-                            <p className={style.projSummary}>{langs[lang].projOneSummary}</p>
+                            <p className={style.projSummary}>{projects.portfolio[lang].summary}</p>
                             <div className={style.projDate}>
-                                <p className={style.projDateTitle}>{langs[lang].realizationDate}&nbsp;</p>
-                                <p className={style.projDateDate}>{langs[lang].projOneDate}</p>
+                                <p className={style.projDateTitle}>{langs[lang].prj_realizationDate}&nbsp;</p>
+                                <p className={style.projDateDate}>{projects.portfolio[lang].date}</p>
                             </div>
-                            <p className={style.projTech}>{langs[lang].techUsed}&nbsp;</p>
+                            <p className={style.projTech}>{langs[lang].prj_techUsed}&nbsp;</p>
                             <div className={style.projTechList}>
                                 <img
                                     className={style.projTechIcon}
@@ -100,19 +102,19 @@ const ProjectsSection = () => {
                         <img
                             className={style.projImg}
                             src={projTwo}
-                            alt="Food PI"
-                            title="Food PI"
+                            alt={projects.voyhenry[lang].name}
+                            title={projects.voyhenry[lang].name}
                             loading="lazy"
                         />
                         <div className={style.projInfo}>
-                            <p className={style.projTitle}>voyHenry</p>
+                            <p className={style.projTitle}>{projects.voyhenry[lang].name}</p>
                             <hr color='#00bedd' width='10%' />
-                            <p className={style.projSummary}>{langs[lang].projTwoSummary}</p>
+                            <p className={style.projSummary}>{projects.voyhenry[lang].summary}</p>
                             <div className={style.projDate}>
-                                <p className={style.projDateTitle}>{langs[lang].realizationDate}&nbsp;</p>
-                                <p className={style.projDateDate}>{langs[lang].projTwoDate}</p>
+                                <p className={style.projDateTitle}>{langs[lang].prj_realizationDate}&nbsp;</p>
+                                <p className={style.projDateDate}>{projects.voyhenry[lang].date}</p>
                             </div>
-                            <p className={style.projTech}>{langs[lang].techUsed}&nbsp;</p>
+                            <p className={style.projTech}>{langs[lang].prj_techUsed}&nbsp;</p>
                             <div className={style.projTechList}>
                             <img
                                     className={style.projTechIcon}
@@ -197,36 +199,11 @@ const ProjectsSection = () => {
                 </a>
                 {/* ------------------------------------- */}
                 <a href="/projects" style={{ textAlign: "center" }}>
-                    <button className={style.projBtn}>{langs[lang].button}</button>
+                    <button className={style.projBtn}>{langs[lang].prj_button}</button>
                 </a>
             </div>
         </section>
     );
-};
-
-/* ---------------------------------- LANGUAGES ---------------------------------- */
-
-const langs = {
-    en: {
-        title: "LATEST PROJECTS",
-        projOneSummary: "The one you're browsing right now! I made this portfolio to let people know a little bit about me and what I do. I'll keep updating this as I grow as a professional.",
-        projOneDate: "Apr. 2023",
-        projTwoSummary: "Group project made for the last instance of the Fullstack Developer course at Henry.",
-        projTwoDate: "Feb. - Mar. 2023",
-        realizationDate: "Realization date:",
-        techUsed: "Tech used:",
-        button: "See more",
-    },
-    es: {
-        title: "PROYECTOS RECIENS",
-        projOneSummary: "¡El que estás viendo ahora mismo! Hice este portafolio para que la gente sepa un poco sobre mí y lo que hago. Seguiré actualizando esto a medida que crezca como profesional.",
-        projOneDate: "Abr. 2023",
-        projTwoSummary: "Proyecto grupal realizado para la última instancia del curso Fullstack Developer en Henry.",
-        projTwoDate: "Feb. - Mar. 2023",
-        realizationDate: "Fecha de realización:",
-        techUsed: "Tecnologías usadas:",
-        button: "Ver más",
-    },
 };
 
 export default ProjectsSection;

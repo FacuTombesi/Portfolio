@@ -1,0 +1,12 @@
+{
+    "light": {
+        "backgroundColor": "white",
+        "backgroundColor2": "#00a7af",
+        "textColor": "black"
+    },
+    "dark": {
+        "backgroundColor": "black",
+        "backgroundColor2": "#005257",
+        "textColor": "white"
+    }
+}

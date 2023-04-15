@@ -3,18 +3,21 @@ import style from "../../styles/cards/Cards.module.css";
 import styled from "styled-components";
 import ThemeContext from "../../styles/darkMode/ThemeContext";
 import LangContext from "../../styles/language/LangContext";
+import themes from "../../styles/darkMode/themes.json";
+import langs from "../../styles/language/langs.json";
+import projects from "../../assets/projects/projects.json";
 
-import projThumbnail from "../../assets/thumbnailsFOODPI.jpg";
+import projThumbnail from "../../assets/img/thumbnailsFOODPI.jpg";
 
 /* ---------- SKILLS ---------- */
-import skillREACT from "../../assets/skillREACT.png";
-import skillREDUX from "../../assets/skillREDUX.png";
-import skillJAVASCRIPT from "../../assets/skillJAVASCRIPT.png";
-import skillNODEJS from "../../assets/skillNODEJS.png";
-import skillEXPRESS from "../../assets/skillEXPRESS.png";
-import skillPOSTGRESQL from "../../assets/skillPOSTGRESQL.png";
-import skillHTML from "../../assets/skillHTML.png";
-import skillCSS from "../../assets/skillCSS.png";
+import skillREACT from "../../assets/img/skillREACT.png";
+import skillREDUX from "../../assets/img/skillREDUX.png";
+import skillJAVASCRIPT from "../../assets/img/skillJAVASCRIPT.png";
+import skillNODEJS from "../../assets/img/skillNODEJS.png";
+import skillEXPRESS from "../../assets/img/skillEXPRESS.png";
+import skillPOSTGRESQL from "../../assets/img/skillPOSTGRESQL.png";
+import skillHTML from "../../assets/img/skillHTML.png";
+import skillCSS from "../../assets/img/skillCSS.png";
 
 const Container = styled.section `
     background-color: ${({ theme }) => theme.backgroundColor};
@@ -104,44 +107,12 @@ const FoodPICard = () => {
                         />
                     </div>
                     <a href="/projects/foodpi">
-                        <button className={style.buttons}>{langs[lang].button}</button>
+                        <button className={style.buttons}>{langs[lang].crd_button}</button>
                     </a>
                 </div>
             </div>
         </Container>
     );
-};
-
-/* ---------------------------------- THEME STYLES ---------------------------------- */
-
-const themes = {
-    light: {
-        backgroundColor: "white",
-        textColor: "black",
-    },
-    dark: {
-        backgroundColor: "black",
-        textColor: "white",
-    },
-};
-
-/* ---------------------------------- LANGUAGES ---------------------------------- */
-
-const langs = {
-    en: {
-        projSummary: "PI (Individual Proyect) made for the last instance of the Fullstack Developer course at Henry.",
-        projDate: "Feb. 2023",
-        realizationDate: "Realization date:",
-        techUsed: "Tech used:",
-        button: "Read more",
-    },
-    es: {
-        projSummary: "PI (Proyecto Individual) realizado para la última instancia del curso Fullstack Developer en Henry.",
-        projDate: "Feb. 2023",
-        realizationDate: "Fecha de realización:",
-        techUsed: "Tecnologías usadas:",
-        button: "Leer más",
-    },
 };
 
 export default FoodPICard;

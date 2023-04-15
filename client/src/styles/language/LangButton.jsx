@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import langENG from "../../assets/langENG.png";
-import langESP from "../../assets/langESP.png";
+import langENG from "../../assets/img/langENG.png";
+import langESP from "../../assets/img/langESP.png";
 import LangContext from "./LangContext";
 
 const LangButton = () => {

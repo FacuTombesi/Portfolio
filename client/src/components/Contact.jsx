@@ -1,18 +1,20 @@
 import React, { useState, useContext } from "react";
 import style from "../styles/Contact.module.css";
 import styled from "styled-components";
-import iconGITHUB from "../assets/iconGITHUB.png";
-import iconGITHUBwhite from "../assets/iconGITHUB(white).png";
-import iconLINKEDIN from "../assets/iconLINKEDIN.png";
-import iconLINKEDINwhite from "../assets/iconLINKEDIN(white).png";
-import iconMAIL from "../assets/iconMAIL.png";
-import iconMAILwhite from "../assets/iconMAIL(white).png";
+import iconGITHUB from "../assets/img/iconGITHUB.png";
+import iconGITHUBwhite from "../assets/img/iconGITHUB(white).png";
+import iconLINKEDIN from "../assets/img/iconLINKEDIN.png";
+import iconLINKEDINwhite from "../assets/img/iconLINKEDIN(white).png";
+import iconMAIL from "../assets/img/iconMAIL.png";
+import iconMAILwhite from "../assets/img/iconMAIL(white).png";
 import ThemeContext from "../styles/darkMode/ThemeContext";
 import LangContext from "../styles/language/LangContext";
+import themes from "../styles/darkMode/themes.json";
+import langs from "../styles/language/langs.json";
 
 const Container = styled.section `
-    background-color: ${({ theme }) => theme.backgroundColor};
-    color: ${({ theme }) => theme.textColor};
+    background-color: ${({ theme }) => theme.backgroundColor2};
+    color: white;
     transition: background-color 0.5s, color 0.5s;
 `
 
@@ -26,7 +28,7 @@ const Contact = () => {
     return (
         <Container theme={themes[theme]} lang={langs[lang]} className={style.contact} id="contact">
             <div className={style.contactCont}>
-                <p className={style.contactTitle}>{langs[lang].title}</p>
+                <p className={style.contactTitle}>{langs[lang].cnt_title}</p>
                 <hr color="white" width="10%" />
                 <div className={style.iconsCont}>
                     <a href="mailto:facundomtombesi@gmail.com" target="_blank" rel="noreferrer">
@@ -66,30 +68,6 @@ const Contact = () => {
             </div>
         </Container>
     );
-};
-
-/* ---------------------------------- THEME STYLES ---------------------------------- */
-
-const themes = {
-    light: {
-        backgroundColor: "#00a7af",
-        textColor: "white",
-    },
-    dark: {
-        backgroundColor: "#005257",
-        textColor: "white",
-    },
-};
-
-/* ---------------------------------- LANGUAGES ---------------------------------- */
-
-const langs = {
-    en: {
-        title: "CONTACT",
-    },
-    es: {
-        title: "CONTACTO",
-    },
 };
 
 export default Contact;
