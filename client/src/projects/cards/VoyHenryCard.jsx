@@ -1,9 +1,12 @@
 import React, { useContext } from "react";
+import { useLocation } from "react-router-dom";
 import style from "../../styles/cards/Cards.module.css";
 import styled from "styled-components";
 import ThemeContext from "../../styles/darkMode/ThemeContext";
 import LangContext from "../../styles/language/LangContext";
 import themes from "../../styles/darkMode/themes.json";
+import langs from "../../styles/language/langs.json";
+import projects from "../../assets/projects/projects.json";
 
 import projThumbnail from "../../assets/img/thumbnailsVOYHENRY.jpg";
 
@@ -20,16 +23,26 @@ import skillCSS from "../../assets/img/skillCSS.png";
 import skillADOBEXD from "../../assets/img/skillADOBEXD.png";
 import skillILLUSTRATOR from "../../assets/img/skillILLUSTRATOR.png";
 
-const Container = styled.section `
-    background-color: ${({ theme }) => theme.backgroundColor};
-    color: ${({ theme }) => theme.textColor};
-    transition: background-color 0.5s, color 0.5s;
-`
+let Container = styled.section;
 
 const VoyHenryCard = () => {
     const { theme } = useContext(ThemeContext);
     const { lang } = useContext(LangContext);
+    const location = useLocation();
 
+    const isHome = location.pathname === "/";
+    
+    isHome 
+        ? Container = styled.section `
+            background-color: transparent;
+            color: white;
+        `
+        : Container = styled.section `
+            background-color: ${({ theme }) => theme.backgroundColor};
+            color: ${({ theme }) => theme.textColor};
+            transition: background-color 0.5s, color 0.5s;
+        `
+    
     return (
         <Container theme={themes[theme]} lang={langs[lang]}>
             <div className={style.cardCont}>
@@ -41,14 +54,14 @@ const VoyHenryCard = () => {
                     loading="lazy"
                 />
                 <div className={style.projInfo}>
-                    <p className={style.projTitle}>voyHenry</p>
+                    <p className={style.projTitle}>{projects.proj2[lang].name}</p>
                     <hr color='#00bedd' width='10%' />
-                    <p className={style.projSummary}>{langs[lang].projSummary}</p>
+                    <p className={style.projSummary}>{projects.proj2[lang].summary}</p>
                     <div className={style.projDate}>
-                        <p className={style.projDateTitle}>{langs[lang].realizationDate}&nbsp;</p>
-                        <p className={style.projDateDate}>{langs[lang].projDate}</p>
+                        <p className={style.projDateTitle}>{langs[lang].prj_realizationDate}&nbsp;</p>
+                        <p className={style.projDateDate}>{projects.proj2[lang].date}</p>
                     </div>
-                    <p className={style.projTech}>{langs[lang].techUsed}&nbsp;</p>
+                    <p className={style.projTech}>{langs[lang].prj_techUsed}&nbsp;</p>
                     <div className={style.projTechList}>
                         <img
                             className={style.projTechIcon}
@@ -128,32 +141,15 @@ const VoyHenryCard = () => {
                             loading="lazy"
                         />
                     </div>
-                    <a href="/projects/voyhenry">
-                        <button className={style.buttons}>{langs[lang].button}</button>
-                    </a>
+                    {!isHome && (
+                        <a href="/projects/voyhenry">
+                            <button className={style.buttons}>{langs[lang].crd_button}</button>
+                        </a>
+                    )}
                 </div>
             </div>
         </Container>
     );
-};
-
-/* ---------------------------------- LANGUAGES ---------------------------------- */
-
-const langs = {
-    en: {
-        projSummary: "Group project made for the last instance of the Fullstack Developer course at Henry.",
-        projDate: "Feb. - Mar. 2023",
-        realizationDate: "Realization date:",
-        techUsed: "Tech used:",
-        button: "Read more",
-    },
-    es: {
-        projSummary: "Proyecto grupal realizado para la última instancia del curso Fullstack Developer en Henry.",
-        projDate: "Feb. - Mar. 2023",
-        realizationDate: "Fecha de realización:",
-        techUsed: "Tecnologías usadas:",
-        button: "Leer más",
-    },
 };
 
 export default VoyHenryCard;

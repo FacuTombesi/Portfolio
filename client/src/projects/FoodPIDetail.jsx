@@ -1,11 +1,13 @@
 import React, { useContext } from "react";
 import ScrollToTop from "react-scroll-to-top";
-import style from "../styles/ProjectsPage.module.css";
+import style from "../styles/ProjectsDetail.module.css";
 import styled from "styled-components";
 import NavBar from "../components/NavBar";
 import ThemeContext from "../styles/darkMode/ThemeContext";
 import LangContext from "../styles/language/LangContext";
 import themes from "../styles/darkMode/themes.json";
+// import langs from "../styles/language/langs.json";
+import projects from "../assets/projects/projects.json";
 
 const ProjCont = styled.section `
     background-color: ${({ theme }) => theme.backgroundColor};
@@ -18,7 +20,7 @@ const FoodPI = () => {
     const { lang } = useContext(LangContext);
 
     return (
-        <div lang={langs[lang]}>
+        <div>
             <ScrollToTop 
                 smooth="true"
                 top="60"

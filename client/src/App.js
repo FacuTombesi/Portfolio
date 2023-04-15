@@ -3,8 +3,9 @@ import { Route, Switch } from "react-router-dom";
 import "./App.css";
 import Home from "./views/Home";
 import Projects from "./views/Projects";
-import FoodPI from "./projects/FoodPI";
-import VoyHenry from "./projects/VoyHenry";
+import FoodPI from "./projects/FoodPIDetail";
+import VoyHenry from "./projects/VoyHenryDetail";
+import Portfolio from "./projects/PortfolioDetail";
 import ThemeContext from "./styles/darkMode/ThemeContext";
 import LangContext from "./styles/language/LangContext";
 
@@ -27,8 +28,10 @@ const App = () => {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/projects" component={Projects} />
+            {/* ------------ PROJECTS ------------ */}
             <Route path="/projects/foodpi" component={FoodPI} />
             <Route path="/projects/voyhenry" component={VoyHenry} />
+            <Route path="/projects/portfolio" component={Portfolio} />
           </Switch>
         </div>
       </LangContext.Provider>

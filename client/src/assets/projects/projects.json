@@ -1,43 +1,43 @@
 {
-    "foodpi": {
+    "proj1": {
         "en": {
+            "id": "1",
             "name": "Food PI",
             "summary": "PI (Individual Proyect) made for the last instance of the Fullstack Developer course at Henry.",
-            "description": "",
             "date": "Feb. 2023"
         },
         "es": {
+            "id": "1",
             "name": "Food PI",
             "summary": "PI (Proyecto Individual) realizado para la última instancia del curso Fullstack Developer en Henry.",
-            "description": "",
             "date": "Feb. 2023"
         }
     },
-    "voyhenry": {
+    "proj2": {
         "en": {
+            "id": "2",
             "name": "voyHenry",
             "summary": "Group project made for the last instance of the Fullstack Developer course at Henry.",
-            "description": "",
             "date": "Feb. - Mar. 2023"
         },
         "es": {
+            "id": "2",
             "name": "voyHenry",
             "summary": "Proyecto grupal realizado para la última instancia del curso Fullstack Developer en Henry",
-            "description": "",
             "date": "Feb. - Mar. 2023"
         }
     },
-    "portfolio": {
+    "proj3": {
         "en": {
+            "id": "3",
             "name": "FT Portfolio",
             "summary": "The one you're browsing right now! I made this portfolio to let people know a little bit about me and what I do. I'll keep updating this as I grow as a professional.",
-            "description": "",
             "date": "Apr. 2023"
         },
         "es": {
+            "id": "3",
             "name": "FT Portfolio",
             "summary": "¡El que estás viendo ahora mismo! Hice este portafolio para que la gente sepa un poco sobre mí y lo que hago. Seguiré actualizando esto a medida que crezca como profesional",
-            "description": "",
             "date": "Abr. 2023"
         }
     }

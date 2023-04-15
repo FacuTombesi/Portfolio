@@ -71,3 +71,13 @@
     background-color: white;
     color: #00bedd;
 }
+
+@media (max-width: 768px) {
+    .cardCont {
+        flex-direction: column;
+    }
+
+    .projInfo {
+        align-items: center;
+    }
+}

@@ -55,5 +55,22 @@
 @media (max-width: 768px) {
     .banner {
         width: 90%;
+        height: 15vh;
+    }
+
+    .allProjects {
+        font-weight: 900;
+        font-size: 250%;
+        margin: 0px;
+    }
+    
+    .my {
+        font-weight: 300;
+        font-size: 250%;
+        margin: 0px;
+    }
+
+    .projList {
+        width: 90%;
     }
 }

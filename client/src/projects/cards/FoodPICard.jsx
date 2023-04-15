@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { useLocation } from "react-router-dom";
 import style from "../../styles/cards/Cards.module.css";
 import styled from "styled-components";
 import ThemeContext from "../../styles/darkMode/ThemeContext";
@@ -19,15 +20,25 @@ import skillPOSTGRESQL from "../../assets/img/skillPOSTGRESQL.png";
 import skillHTML from "../../assets/img/skillHTML.png";
 import skillCSS from "../../assets/img/skillCSS.png";
 
-const Container = styled.section `
-    background-color: ${({ theme }) => theme.backgroundColor};
-    color: ${({ theme }) => theme.textColor};
-    transition: background-color 0.5s, color 0.5s;
-`
+let Container = styled.section;
 
 const FoodPICard = () => {
     const { theme } = useContext(ThemeContext);
     const { lang } = useContext(LangContext);
+    const location = useLocation();
+
+    const isHome = location.pathname === "/";
+
+    isHome 
+        ? Container = styled.section `
+            background-color: transparent;
+            color: white;
+        `
+        : Container = styled.section `
+            background-color: ${({ theme }) => theme.backgroundColor};
+            color: ${({ theme }) => theme.textColor};
+            transition: background-color 0.5s, color 0.5s;
+        `
 
     return (
         <Container theme={themes[theme]} lang={langs[lang]}>
@@ -40,14 +51,14 @@ const FoodPICard = () => {
                     loading="lazy"
                 />
                 <div className={style.projInfo}>
-                    <p className={style.projTitle}>Food PI</p>
+                    <p className={style.projTitle}>{projects.proj1[lang].name}</p>
                     <hr color='#00bedd' width='10%' />
-                    <p className={style.projSummary}>{langs[lang].projSummary}</p>
+                    <p className={style.projSummary}>{projects.proj1[lang].summary}</p>
                     <div className={style.projDate}>
-                        <p className={style.projDateTitle}>{langs[lang].realizationDate}&nbsp;</p>
-                        <p className={style.projDateDate}>{langs[lang].projDate}</p>
+                        <p className={style.projDateTitle}>{langs[lang].prj_realizationDate}&nbsp;</p>
+                        <p className={style.projDateDate}>{projects.proj1[lang].date}</p>
                     </div>
-                    <p className={style.projTech}>{langs[lang].techUsed}&nbsp;</p>
+                    <p className={style.projTech}>{langs[lang].prj_techUsed}&nbsp;</p>
                     <div className={style.projTechList}>
                         <img
                             className={style.projTechIcon}
@@ -106,9 +117,11 @@ const FoodPICard = () => {
                             loading="lazy"
                         />
                     </div>
-                    <a href="/projects/foodpi">
-                        <button className={style.buttons}>{langs[lang].crd_button}</button>
-                    </a>
+                    {!isHome && (
+                        <a href="/projects/foodpi">
+                            <button className={style.buttons}>{langs[lang].crd_button}</button>
+                        </a>
+                    )}
                 </div>
             </div>
         </Container>
