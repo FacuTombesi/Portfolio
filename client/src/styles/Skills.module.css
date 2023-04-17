@@ -59,7 +59,11 @@
     }
 
     .skillsIconColumn {
-        margin-right: 80px;
+        margin-right: 60px;
+    }
+
+    .skillInfo {
+        flex-direction: column;
     }
 
     .skillIcon {

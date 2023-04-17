@@ -51,11 +51,11 @@ const NavBar = () => {
             <div className={`navLinksCont ${isOpen && "open"}`}>
                 {isHome && (
                     <>
-                        <p className="navLinks" href="#home" onClick={(e) => handleClick(e, "home")}>{langs[lang].nav_home}</p>
-                        <p className="navLinks" href="#about" onClick={(e) => handleClick(e, "about")}>{langs[lang].nav_about}</p>
-                        <p className="navLinks" href="#projects" onClick={(e) => handleClick(e, "projects")}>{langs[lang].nav_projects}</p>
-                        <p className="navLinks" href="#skills" onClick={(e) => handleClick(e, "skills")}>{langs[lang].nav_skills}</p>
-                        <p className="navLinks" href="#contact" onClick={(e) => handleClick(e, "contact")}>{langs[lang].nav_contact}</p>
+                        <p className="navLinks" href="#home" onClick={(e) => {handleClick(e, "home"); setIsOpen(false);}}>{langs[lang].nav_home}</p>
+                        <p className="navLinks" href="#about" onClick={(e) => {handleClick(e, "about"); setIsOpen(false)}}>{langs[lang].nav_about}</p>
+                        <p className="navLinks" href="#projects" onClick={(e) => {handleClick(e, "projects"); setIsOpen(false)}}>{langs[lang].nav_projects}</p>
+                        <p className="navLinks" href="#skills" onClick={(e) => {handleClick(e, "skills"); setIsOpen(false)}}>{langs[lang].nav_skills}</p>
+                        <p className="navLinks" href="#contact" onClick={(e) => {handleClick(e, "contact"); setIsOpen(false)}}>{langs[lang].nav_contact}</p>
                     </>
                 )}
                 <div className="toggleCont">

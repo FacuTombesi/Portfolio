@@ -80,4 +80,13 @@
     .projInfo {
         align-items: center;
     }
+
+    .projTechList {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .projTechIcon {
+        margin: 7px;
+    }
 }

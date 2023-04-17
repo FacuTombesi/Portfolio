@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import iconLight from "../../assets/img/siteLIGHT.png";
 import iconDark from "../../assets/img/siteDARK.png";
+import iconDarkMobile from "../../assets/img/siteDARK(mobile).png";
 import ThemeContext from "./ThemeContext";
 
 const ToggleButton = () => {
@@ -10,8 +11,16 @@ const ToggleButton = () => {
     return (
         <ToggleBtn onClick={toggleTheme}>
             {theme === "light" 
-                ? <ToggleIcon src={iconLight} alt="Light Mode" />
-                : <ToggleIcon src={iconDark} alt="Dark Mode" />
+                ? (<ToggleIcon src={iconLight} alt="Light Mode" />)
+                : (
+                    <ToggleIcon 
+                        src={window.innerWidth <= 768 
+                            ? iconDarkMobile
+                            : iconDark
+                        } 
+                        alt="Dark Mode" 
+                    />
+                )
             }
         </ToggleBtn>
     );
