@@ -4,13 +4,15 @@
             "id": "1",
             "name": "Food PI",
             "summary": "PI (Individual Proyect) made for the last instance of the Fullstack Developer course at Henry.",
-            "date": "Feb. 2023"
+            "date": "Feb. 2023",
+            "description": "I studied at HENRY for 4 months and the first of the two final projects to graduate as a Full Stack Developer is an individual project, or PI (Proyecto Invividual, in spanish), and this one was mine. HENRY gave each the us (students) one of 5 topics for this project. Mine, as you can probably tell, was food. The objective was to create an app, including backend and frontend, using a api that consisted of food recipes. We were also given some tasks to accomplish the challenge. These tasks were: it had to contain at least 2 filters (those filters had to be able to be used combined), you had to be able to search recipes, you had to be able to create your own recipes and last but not least, I was not allowed to use any library/technology other than the ones teached at HENRY. I had 2 weeks to complete the project, including database, functionality, design and deploy, but even with that little amount of time I completed the challenge successfully and this was the result"
         },
         "es": {
             "id": "1",
             "name": "Food PI",
             "summary": "PI (Proyecto Individual) realizado para la última instancia del curso Fullstack Developer en Henry.",
-            "date": "Feb. 2023"
+            "date": "Feb. 2023",
+            "description": "Estudié en HENRY durante 4 meses y el primero de los dos proyectos finales para graduarme como Full Stack Developer es un proyecto individual, o PI, y este fue el mío. HENRY le dio a cada uno de nosotros (estudiantes) uno de los 5 temas para este proyecto. El mío, como probablemente te des cuenta, era la comida. El objetivo era crear una aplicación, incluyendo backend y frontend, utilizando una API que consistiera en recetas de comida. También nos dieron algunas tareas para lograr el desafío. Estas tareas eran: tenía que contener al menos 2 filtros (esos filtros tenían que poder usarse combinados), tenía que poder buscar recetas, tenía que poder crear sus propias recetas y, por último, pero no menos importante, No se me permitía usar ninguna biblioteca/tecnología que no fuera la que se enseña en HENRY. Tuve 2 semanas para completar el proyecto, incluyendo la base de datos, la funcionalidad, el diseño y la implementación, pero incluso con ese poco tiempo completé el desafío con éxito y este fue el resultado"
         }
     },
     "proj2": {

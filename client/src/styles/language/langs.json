@@ -25,7 +25,10 @@
         "skl_titleOne": "TECH SKILLS",
         "skl_titleTwo": "DESIGN SKILLS",
         "cnt_title": "CONTACT",
-        "crd_button": "Read more"
+        "crd_button": "Read more",
+        "dtl_name": "PROJECT NAME",
+        "dtl_description": "DESCRIPTION",
+        "dtl_button": "Back"
     },
     "es": {
         "nav_home": "INICIO",
@@ -53,6 +56,9 @@
         "skl_titleOne": "HABILIDADES DE DESARROLLO",
         "skl_titleTwo": "HABILIDADES DE DISEÑO",
         "cnt_title": "CONTACTO",
-        "crd_button": "Leer más"
+        "crd_button": "Leer más",
+        "dtl_name": "NOMBRE DEL PROYECTO",
+        "dtl_description": "DESCRIPCIÓN",
+        "dtl_button": "Atrás"
     }
 }

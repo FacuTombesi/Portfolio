@@ -6,11 +6,14 @@
 
 .banner {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 70%;
     height: 25vh;
+}
+
+.bannerImg {
+    width: 250px;
 }
 
 .projCont {
@@ -24,6 +27,49 @@
 
 .projInfo {
     width: 70%;
+}
+
+.nameInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.projTitle {
+    font-weight: 800;
+}
+
+.projName {
+    font-size: 100%;
+    font-weight: 600;
+    color: #00bedd;
+}
+
+.dateInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.projDateTitle {
+    font-size: 90%;
+    font-weight: 600;
+}
+
+.projDateDate {
+    font-size: 90%;
+    font-weight: 300;
+}
+
+.imgContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imgOne {
+    width: 80%;
+    margin: 15px 0px;
 }
 
 .buttons {
@@ -44,5 +90,13 @@
 @media (max-width: 768px) {
     .banner {
         width: 90%;
+    }
+
+    .projInfo {
+        width: 90%;
+    }
+
+    .imgOne {
+        width: 110%;
     }
 }
