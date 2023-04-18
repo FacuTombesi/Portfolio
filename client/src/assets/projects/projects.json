@@ -20,13 +20,15 @@
             "id": "2",
             "name": "voyHenry",
             "summary": "Group project made for the last instance of the Fullstack Developer course at Henry.",
-            "date": "Feb. - Mar. 2023"
+            "date": "Feb. - Mar. 2023",
+            "description": ""
         },
         "es": {
             "id": "2",
             "name": "voyHenry",
             "summary": "Proyecto grupal realizado para la última instancia del curso Fullstack Developer en Henry",
-            "date": "Feb. - Mar. 2023"
+            "date": "Feb. - Mar. 2023",
+            "description": ""
         }
     },
     "proj3": {
@@ -34,13 +36,15 @@
             "id": "3",
             "name": "FT Portfolio",
             "summary": "The one you're browsing right now! I made this portfolio to let people know a little bit about me and what I do. I'll keep updating this as I grow as a professional.",
-            "date": "Apr. 2023"
+            "date": "Apr. 2023",
+            "description": ""
         },
         "es": {
             "id": "3",
             "name": "FT Portfolio",
             "summary": "¡El que estás viendo ahora mismo! Hice este portafolio para que la gente sepa un poco sobre mí y lo que hago. Seguiré actualizando esto a medida que crezca como profesional",
-            "date": "Abr. 2023"
+            "date": "Abr. 2023",
+            "description": ""
         }
     }
 }

@@ -28,6 +28,8 @@
         "crd_button": "Read more",
         "dtl_name": "PROJECT NAME",
         "dtl_description": "DESCRIPTION",
+        "dtl_tech": "TECHNOLOGIES USED",
+        "dtl_team": "TEAM",
         "dtl_button": "Back"
     },
     "es": {
@@ -59,6 +61,8 @@
         "crd_button": "Leer más",
         "dtl_name": "NOMBRE DEL PROYECTO",
         "dtl_description": "DESCRIPCIÓN",
+        "dtl_tech": "TECNOLOGÍAS USADAS",
+        "dtl_team": "EQUIPO",
         "dtl_button": "Atrás"
     }
 }

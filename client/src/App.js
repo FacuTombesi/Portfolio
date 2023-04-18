@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import "./App.css";
 import Home from "./views/Home";
@@ -10,8 +10,8 @@ import ThemeContext from "./styles/darkMode/ThemeContext";
 import LangContext from "./styles/language/LangContext";
 
 const App = () => {
-  const [theme, setTheme] = useState("light");
-  const [lang, setLang] = useState("en");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  const [lang, setLang] = useState(localStorage.getItem("lang") || "en");
 
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
@@ -20,6 +20,11 @@ const App = () => {
   const toggleLang = () => {
     setLang(lang === "en" ? "es" : "en");
   };
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    localStorage.setItem("lang", lang);
+  }, [theme, lang]);
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>

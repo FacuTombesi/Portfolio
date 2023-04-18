@@ -11,11 +11,21 @@ import projects from "../assets/projects/projects.json";
 
 /* ---------------- IMAGES ---------------- */
 import bannerImg from "../assets/img/proyecto_FOODPI.png";
-import screen1 from "../assets/projects/screenshots/FOODPI01.png";
-import screen2 from "../assets/projects/screenshots/FOODPI02.png";
-import screen3 from "../assets/projects/screenshots/FOODPI03.png";
-import screen4 from "../assets/projects/screenshots/FOODPI04.png";
-import screen5 from "../assets/projects/screenshots/FOODPI05.png";
+import screen1 from "../assets/projects/screenshots/FOODPI-01.png";
+import screen2 from "../assets/projects/screenshots/FOODPI-02.png";
+import screen3 from "../assets/projects/screenshots/FOODPI-03.png";
+import screen4 from "../assets/projects/screenshots/FOODPI-04.png";
+import screen5 from "../assets/projects/screenshots/FOODPI-05.png";
+
+/* ---------- SKILLS ---------- */
+import skillREACT from "../assets/img/skillREACT.png";
+import skillREDUX from "../assets/img/skillREDUX.png";
+import skillJAVASCRIPT from "../assets/img/skillJAVASCRIPT.png";
+import skillNODEJS from "../assets/img/skillNODEJS.png";
+import skillEXPRESS from "../assets/img/skillEXPRESS.png";
+import skillPOSTGRESQL from "../assets/img/skillPOSTGRESQL.png";
+import skillHTML from "../assets/img/skillHTML.png";
+import skillCSS from "../assets/img/skillCSS.png";
 
 const ProjCont = styled.section `
     background-color: ${({ theme }) => theme.backgroundColor};
@@ -62,8 +72,8 @@ const FoodPI = () => {
                             <img 
                                 className={style.imgOne}
                                 src={screen1}
-                                alt="Project Home"
-                                title="Project Home"
+                                alt="Landing"
+                                title="Landing"
                             />
                         </div>
                         <p className={style.projTitle}>{langs[lang].dtl_description}</p>
@@ -81,6 +91,94 @@ const FoodPI = () => {
                             {projects.proj1[lang].description.split('. ')[5] + '. '}
                             {projects.proj1[lang].description.split('. ')[6] + '. '}
                         </p>
+                        <p className={style.projTitle}>{langs[lang].dtl_tech}</p>
+                        <hr color="#00bedd" width="10%" />
+                        <div className={style.techList}>
+                            <img
+                                className={style.techIcon}
+                                src={skillJAVASCRIPT}
+                                alt="Javascript"
+                                title="Javascript"
+                                loading="lazy"
+                            />
+                            <img
+                                className={style.techIcon}
+                                src={skillREACT}
+                                alt="React"
+                                title="React"
+                                loading="lazy"
+                            />
+                            <img
+                                className={style.techIcon}
+                                src={skillREDUX}
+                                alt="Redux"
+                                title="Redux"
+                                loading="lazy"
+                            />
+                            <img
+                                className={style.techIcon}
+                                src={skillNODEJS}
+                                alt="Node.JS"
+                                title="Node.JS"
+                                loading="lazy"
+                            />
+                            <img
+                                className={style.techIcon}
+                                src={skillEXPRESS}
+                                alt="Express"
+                                title="Express"
+                                loading="lazy"
+                            />
+                            <img
+                                className={style.techIcon}
+                                src={skillPOSTGRESQL}
+                                alt="PostgreSQL"
+                                title="PostgreSQL"
+                                loading="lazy"
+                            />
+                            <img
+                                className={style.techIcon}
+                                src={skillHTML}
+                                alt="HTML"
+                                title="HTML"
+                                loading="lazy"
+                            />
+                            <img
+                                className={style.techIcon}
+                                src={skillCSS}
+                                alt="CSS"
+                                title="CSS"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div className={style.imgSubContainer}>
+                            <img 
+                                className={style.images}
+                                src={screen2}
+                                alt="Home"
+                                title="Home"
+                            />
+                            <img 
+                                className={style.images}
+                                src={screen3}
+                                alt="Recipe Detail"
+                                title="Recipe Detail"
+                            />
+                        </div>
+                        <div className={style.imgSubContainer}>
+                            <img 
+                                className={style.images}
+                                src={screen4}
+                                alt="Create Recipe"
+                                title="Create Recipe"
+                            />
+                            <img 
+                                className={style.images}
+                                src={screen5}
+                                alt="About"
+                                title="About"
+                            />
+                        </div>
                     </div>
                     <a href="/projects">
                         <button className={style.buttons}>{langs[lang].dtl_button}</button>
