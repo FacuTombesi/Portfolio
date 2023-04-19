@@ -46,6 +46,11 @@
         transition: 0.3s ease all;
     }
 
+    .navLinks {
+        font-size: 120%;
+        margin: 20px 0px;
+    }
+
     .navLinks:hover {
         color: white;
     }

@@ -80,16 +80,12 @@ const FoodPI = () => {
                         <hr color="#00bedd" width="10%" />
                         <p className={style.proj}>
                             {projects.proj1[lang].description.split('. ')[0] + '. '}
-                            <br/>
-                            <br/>
-                            {projects.proj1[lang].description.split('. ')[1] + '. '}
-                            {projects.proj1[lang].description.split('. ')[2] + '. '}
-                            {projects.proj1[lang].description.split('. ')[3] + '. '}
-                            {projects.proj1[lang].description.split('. ')[4] + '. '}
-                            <br/>
-                            <br/>
-                            {projects.proj1[lang].description.split('. ')[5] + '. '}
-                            {projects.proj1[lang].description.split('. ')[6] + '. '}
+                            <br/><br/>
+                            {projects.proj1[lang].description.split('. ').slice(1, 5).map((sentence, index) => (
+                                <React.Fragment key={index}>{sentence}. </React.Fragment>
+                            ))}
+                            <br/><br/>
+                            {projects.proj1[lang].description.split('. ').slice(5).join('. ')}
                         </p>
                         <p className={style.projTitle}>{langs[lang].dtl_tech}</p>
                         <hr color="#00bedd" width="10%" />
@@ -178,6 +174,12 @@ const FoodPI = () => {
                                 alt="About"
                                 title="About"
                             />
+                        </div>
+                        <div className={style.nameInfo}>
+                            <p className={style.projTitle}>Deploy:&nbsp;</p>
+                            <a href="https://pi-food-ftombesi.vercel.app/"  target="_blank" rel="noreferrer">
+                                <p className={style.deployLink}>{projects.proj1[lang].name}</p>
+                            </a>
                         </div>
                     </div>
                     <a href="/projects">

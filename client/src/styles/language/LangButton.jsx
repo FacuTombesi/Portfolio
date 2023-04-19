@@ -28,6 +28,10 @@ const ToggleBtn = styled.button `
 
 const ToggleIcon = styled.img `
     width: 25px;
+
+    @media (max-width: 768px) {
+        width: 45px;
+    }
 `
 
 export default LangButton;

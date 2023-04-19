@@ -134,13 +134,23 @@
     border-radius: 20px;
     color: white;
     padding: 5px 20px;
-    margin-top: 40px;
+    margin: 40px 0px;
     cursor: pointer;
 }
 
 .buttons:hover {
     background-color: white;
     color: #00bedd;
+}
+
+.deployLink {
+    font-size: 100%;
+    font-weight: 600;
+    color: #00bedd;
+}
+
+.deployLink:hover {
+    color: #00ddff;
 }
 
 @media (max-width: 768px) {

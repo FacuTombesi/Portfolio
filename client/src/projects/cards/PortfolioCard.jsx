@@ -101,11 +101,11 @@ const PortfolioCard = () => {
                             loading="lazy"
                         />
                     </div>
-                    {!isHome && (
+                    {/* {!isHome && (
                         <a href="/projects/portfolio">
                             <button className={style.buttons}>{langs[lang].crd_button}</button>
                         </a>
-                    )}
+                    )} */}
                 </div>
             </div>
         </Container>

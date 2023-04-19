@@ -83,11 +83,14 @@ const VoyHenry = () => {
                         <p className={style.projTitle}>{langs[lang].dtl_description}</p>
                         <hr color="#00bedd" width="10%" />
                         <p className={style.proj}>
-                            {/* DESCRIPCION */}
+                            {projects.proj2[lang].description.split('. ')[0] + '. '}
+                            <br /><br />
+                            {projects.proj2[lang].description.split('. ').slice(1, 9).map((sentence, index) => (
+                                <React.Fragment key={index}>{sentence}. </React.Fragment>
+                            ))}
+                            <br /><br />
+                            {projects.proj2[lang].description.split('. ').slice(9).join('. ')}
                         </p>
-                        <div className={style.imgSubContainer}>
-                            {/* IMAGENES DE SECCIONES */}
-                        </div>
                         <p className={style.projTitle}>{langs[lang].dtl_tech}</p>
                         <hr color="#00bedd" width="10%" />
                         <div className={style.techList}>
@@ -220,6 +223,12 @@ const VoyHenry = () => {
                                 alt="About us"
                                 title="About us"
                             />
+                        </div>
+                        <div className={style.nameInfo}>
+                            <p className={style.projTitle}>Deploy:&nbsp;</p>
+                            <a href="https://pf-voy-henry.vercel.app/"  target="_blank" rel="noreferrer">
+                                <p className={style.deployLink}>{projects.proj2[lang].name}</p>
+                            </a>
                         </div>
                     </div>
                     <a href="/projects">
