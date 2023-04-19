@@ -5,7 +5,6 @@ import Home from "./views/Home";
 import Projects from "./views/Projects";
 import FoodPI from "./projects/FoodPIDetail";
 import VoyHenry from "./projects/VoyHenryDetail";
-import Portfolio from "./projects/PortfolioDetail";
 import ThemeContext from "./styles/darkMode/ThemeContext";
 import LangContext from "./styles/language/LangContext";
 
@@ -36,7 +35,6 @@ const App = () => {
             {/* ------------ PROJECTS ------------ */}
             <Route path="/projects/foodpi" component={FoodPI} />
             <Route path="/projects/voyhenry" component={VoyHenry} />
-            <Route path="/projects/portfolio" component={Portfolio} />
           </Switch>
         </div>
       </LangContext.Provider>
