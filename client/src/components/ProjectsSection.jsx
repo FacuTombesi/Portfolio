@@ -16,9 +16,7 @@ const ProjectsSection = () => {
                 <p className={style.projSecTitle}>{langs[lang].prj_title}</p>
                 <hr color='#00bedd' width='10%' />
                 {/* ------------- PROJECT 1 ------------- */}
-                <a href="/projects/portfolio">
-                    <PortfolioCard />
-                </a>
+                <PortfolioCard />
                 {/* ------------- PROJECT 2 ------------- */}
                 <a href="/projects/voyhenry">
                     <VoyHenryCard />

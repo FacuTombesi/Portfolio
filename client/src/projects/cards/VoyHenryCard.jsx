@@ -36,6 +36,15 @@ const VoyHenryCard = () => {
         ? Container = styled.section `
             background-color: transparent;
             color: white;
+            margin-top: 10px;
+            border-radius: 30px;
+            padding: 5px 15px;
+
+            &:hover {
+                background-color: white;
+                color: black;
+                transition: 0.5s;
+            }
         `
         : Container = styled.section `
             background-color: ${({ theme }) => theme.backgroundColor};
